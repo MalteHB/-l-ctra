@@ -1,5 +1,5 @@
 # Ælæctra - A Step Towards More Efficient Danish Natural Language Processing
-Ælæctra is a Danish Transformer-based language model created to enhance the variety of Danish NLP resources with a more efficient model compared to previous state-of-the-art (SOTA) models. 
+**Ælæctra** is a Danish Transformer-based language model created to enhance the variety of Danish NLP resources with a more efficient model compared to previous state-of-the-art (SOTA) models. 
 
 Ælæctra was pretrained with the ELECTRA-Small (Clark et al., 2020) pretraining approach by using the Danish Gigaword Corpus (Strømberg-Derczynski et al., 2020) and evaluated on Named Entity Recognition tasks. 
 
@@ -7,10 +7,10 @@
 
 Initially two pretrained models are released:
 
-| Model | Layers | Hidden Size | Params | AVG NER micro-f1 (DaNE-testset) | Average Inference Time (Sec/Epoch) | Download |
-| --- | --- | --- | --- | ---  | --- |
-| Ælæctra-Uncased | 12 | 256 | 13.7M | 78.03 (SD = 1.28) | 10.91 | [link](https://www.dropbox.com/s/cag7prs1nvdchqs/%C3%86l%C3%A6ctra.zip?dl=0) |
-| Ælæctra-Cased | 12 | 256 | 14.7M | 80.08 (SD = 0.26) | 10.92 | [link](https://www.dropbox.com/s/cag7prs1nvdchqs/%C3%86l%C3%A6ctra.zip?dl=0) |
+| Model | Layers | Hidden Size | Params | AVG NER micro-f1 (DaNE-testset) | Average Inference Time (Sec/Epoch) | Download | 
+| --- | --- | --- | --- | ---  | --- | --- |
+| Ælæctra-Uncased | 12 | 256 | 13.7M | 78.03 (SD = 1.28) | 10.91 | [Link for models](https://www.dropbox.com/s/cag7prs1nvdchqs/%C3%86l%C3%A6ctra.zip?dl=0) | 
+| Ælæctra-Cased | 12 | 256 | 14.7M | 80.08 (SD = 0.26) | 10.92 | [Link for models](https://www.dropbox.com/s/cag7prs1nvdchqs/%C3%86l%C3%A6ctra.zip?dl=0) | 
 
 On [DaNE](https://danlp.alexandra.dk/304bd159d5de/datasets/ddt.zip) (Hvingelby et al., 2020), Ælæctra scores slightly worse than both cased and uncased Multilingual BERT (Devlin et al., 2019) and Danish BERT (Danish BERT, 2019/2020), however, is more than 3 times faster at inference time. For a full description of the evaluation and specification of the model read the thesis: 'Ælæctra - A Step Towards More Efficient Danish Natural Language Processing'. 
 
@@ -39,12 +39,11 @@ As the majority of this repository is build upon [the works](https://github.com/
 
 #### Contact
 
-For help or further information feel free to connect with the author Malte Højmark-Bertelsen on any of the following platforms:
+For help or further information feel free to connect with the author Malte Højmark-Bertelsen on [hjb@kmd.dk](mailto:hjb@kmd.dk?subject=[GitHub]%20Ælæctra) or any of the following platforms:
 
 [<img align="left" alt="MalteHB | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
 [<img align="left" alt="MalteHB | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
 [<img align="left" alt="MalteHB | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
-[<img align="left" alt="MalteHB | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/mail-dot-ru.svg" />][email]
 
 <br />
 
@@ -53,4 +52,3 @@ For help or further information feel free to connect with the author Malte Højm
 [twitter]: https://twitter.com/malteH_B
 [instagram]: https://www.instagram.com/maltemusen/
 [linkedin]: https://www.linkedin.com/in/malte-h%C3%B8jmark-bertelsen-9a618017b/
-[email]: hjb@kmd.dk
