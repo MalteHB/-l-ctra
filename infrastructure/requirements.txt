@@ -8,5 +8,5 @@ torchvision==0.8.1+cu101
 sklearn==1.8.0 
 matplotlib==3.2.2
 seaborn==0.11.0
-nltk==3.2.5
+nltk==3.4.5
 danlp==0.0.10
