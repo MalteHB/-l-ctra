@@ -1,7 +1,9 @@
 # Ælæctra - A Step Towards More Efficient Danish Natural Language Processing
-**Ælæctra** is a Danish Transformer-based language model created to enhance the variety of Danish NLP resources with a more efficient model compared to previous state-of-the-art (SOTA) models. 
+**Ælæctra** is a Danish Transformer-based language model created to enhance the variety of Danish NLP resources with a more efficient model compared to previous state-of-the-art (SOTA) models. It was created as part of a Cognitive Science bachelor's thesis. The temporary draft can be read [here](https://docs.google.com/document/d/1p-btta9RqE2mirWSus-ZNLcMZlEZN8j1NOjZ7VUxUlM/edit?usp=sharing).
 
 Ælæctra was pretrained with the ELECTRA-Small (Clark et al., 2020) pretraining approach by using the Danish Gigaword Corpus (Strømberg-Derczynski et al., 2020) and evaluated on Named Entity Recognition tasks. 
+
+Ælæctra was, as mentioned, created to enhance the Danish NLP capabilties and please do note how this GitHub still does not support the Danish characters "*Æ, Ø and Å*" as the title of this repository becomes "*-l-ctra*". How ironic.🙂
 
 ### Released Models
 
