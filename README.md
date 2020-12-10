@@ -8,7 +8,6 @@
 Initially two pretrained models are released:
 
 | Model | Layers | Hidden Size | Params | AVG NER micro-f1 (DaNE-testset) | Average Inference Time (Sec/Epoch) | Download |
-| --- | --- | --- | --- | ---  | --- |
 | Ælæctra-Uncased | 12 | 256 | 13.7M | 78.03 (SD = 1.28) | 10.91 | [link](https://www.dropbox.com/s/cag7prs1nvdchqs/%C3%86l%C3%A6ctra.zip?dl=0) |
 | Ælæctra-Cased | 12 | 256 | 14.7M | 80.08 (SD = 0.26) | 10.92 | [link](https://www.dropbox.com/s/cag7prs1nvdchqs/%C3%86l%C3%A6ctra.zip?dl=0) |
 
