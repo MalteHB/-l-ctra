@@ -41,7 +41,7 @@ As the majority of this repository is build upon [the works](https://github.com/
 
 A Giga thanks also goes out to the incredible people who collected The Danish Gigaword Corpus (Strømberg-Derczynski et al., 2020). 
 
-Furthermore, I would like to thank my supervisor [Riccardo Fusaroli](https://github.com/fusaroli) for the support with the thesis, and a special thanks goes out to [Kenneth Enevoldsen](https://github.com/KennethEnevoldsen) for his continouos feedback. 
+Furthermore, I would like to thank my supervisor [Riccardo Fusaroli](https://github.com/fusaroli) for the support with the thesis, and a special thanks goes out to [Kenneth Enevoldsen](https://github.com/KennethEnevoldsen) for his continuous feedback. 
 
 Lastly, i would like to thank KMD, my colleagues from KMD, and my peers and co-students from Cognitive Science for encouriging me to keep on working hard and holding my head up high!
 
