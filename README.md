@@ -3,7 +3,7 @@
 
 Ælæctra was pretrained with the ELECTRA-Small (Clark et al., 2020) pretraining approach by using the Danish Gigaword Corpus (Strømberg-Derczynski et al., 2020) and evaluated on Named Entity Recognition tasks. 
 
-#### Released Models
+### Released Models
 
 Initially two pretrained models are released:
 
@@ -14,15 +14,15 @@ Initially two pretrained models are released:
 
 On [DaNE](https://danlp.alexandra.dk/304bd159d5de/datasets/ddt.zip) (Hvingelby et al., 2020), Ælæctra scores slightly worse than both cased and uncased Multilingual BERT (Devlin et al., 2019) and Danish BERT (Danish BERT, 2019/2020), however, is more than 3 times faster at inference time. For a full description of the evaluation and specification of the model read the thesis: 'Ælæctra - A Step Towards More Efficient Danish Natural Language Processing'. 
 
-#### Pretraining
+### Pretraining
 To pretrain Ælæctra it is recommended to build a Docker Container from the [Dockerfile](https://github.com/MalteHB/Ælæctra/tree/master/notebooks/fine-tuning/). Next, simply follow the [pretraining notebooks](https://github.com/MalteHB/Ælæctra/tree/master/infrastructure/Dockerfile/) 
 
 The pretraining was done by utilizing a single NVIDIA Tesla V100 GPU with 16 GiB, endowed by the Danish data company [KMD](https://www.kmd.dk/). The pretraining took approximately 4 days and 9.5 hours for both the cased and uncased model
 
-#### Fine-tuning
+### Fine-tuning
 To fine-tune any Ælæctra model follow the [fine-tuning notebooks](https://github.com/MalteHB/Ælæctra/tree/master/notebooks/fine-tuning/)
 
-#### References
+### References
 Clark, K., Luong, M.-T., Le, Q. V., & Manning, C. D. (2020). ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators. ArXiv:2003.10555 [Cs]. http://arxiv.org/abs/2003.10555
 
 Danish BERT. (2020). BotXO. https://github.com/botxo/nordic_bert (Original work published 2019)
