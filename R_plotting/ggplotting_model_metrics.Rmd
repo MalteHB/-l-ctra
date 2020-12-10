@@ -1,0 +1,207 @@
+---
+title: "boxplot_Ælæctra_bachelor"
+author: "Malte Højmark-Bertelsen"
+date: "11/12/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, Pdf_kmd, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r pacman}
+pacman::p_load(tidyverse, patchwork, gghalves)
+```
+
+```{r load data}
+df_kmd <- read_csv("/Users/malte/OneDrive\ -\ Aarhus\ universitet/Aarhus\ Universitet/Cognitive\ Science/Bachelor/FINAL_NOTEBOOKS_AND_MODELS/micro_f1_5runs_KMD.csv", 
+               col_types = cols(
+                 run = col_character(),
+                 model = col_character(),
+                 micro_f1 = col_number()))
+
+```
+
+
+```{r load data}
+df_DaNE <- read_csv("/Users/malte/OneDrive\ -\ Aarhus\ universitet/Aarhus\ Universitet/Cognitive\ Science/Bachelor/FINAL_NOTEBOOKS_AND_MODELS/micro_f1_5runs_daNLP.csv", 
+               col_types = cols(
+                 run = col_character(),
+                 model = col_character(),
+                 micro_f1 = col_number()))
+```
+
+```{r kmd plotting}
+p_kmd <- df_kmd %>% ggplot() +
+  coord_cartesian(ylim=c(0.825,0.92)
+                  )+
+  geom_half_point(aes(x = model, y = micro_f1, fill = run), 
+             size = 2.5, 
+             shape = 21, 
+             alpha = 0.8, 
+             position = position_dodge(width = 0.03),
+             transformation = position_jitterdodge(seed = 2, jitter.width = 0.55)
+             )+
+  geom_boxplot(aes(x = model, y = micro_f1), 
+               alpha = 0.2, 
+               width = 0.3,
+               position = position_nudge(x = 0.25), 
+               outlier.shape = NA
+               )+
+  stat_summary(aes(x = model, y = micro_f1, col = ""), 
+               fun=mean, 
+               geom="point", 
+               shape=120, 
+               size=4
+               )+
+  xlab("Model"
+       )+
+  ylab("Micro F1"
+       )+
+  labs(title = "KMD Results - Micro F1"
+       )+
+  scale_fill_brewer(name = "Run", palette = "Dark2"
+                      )+
+  scale_color_manual(name = "Average Micro F1", values = "black"
+                     )+
+  scale_x_discrete(labels=c("Ælæctra_cased" = "Ælæctra Cased", 
+                            "Ælæctra_uncased" = "Ælæctra Uncased", 
+                            "danish_BERT" = "DaBERT", 
+                            "multi_BERT_cased" = "mBERT Cased", 
+                            "multi_BERT_uncased" = "mBERT Uncased")
+                   )+
+  theme_bw()+
+  theme(text = element_text(size=10),
+        axis.text.x = element_text(angle=90, hjust=1)
+        )
+p_kmd
+ggsave("KMD_results.png")
+
+```
+
+
+
+```{r DaNE plotting}
+p_DaNE <- df_DaNE %>% ggplot() +
+  coord_cartesian(ylim=c(0.76,0.86)
+                  )+
+  geom_half_point(aes(x = model, y = micro_f1, fill = run), 
+             size = 2.5, 
+             shape = 21, 
+             alpha = 0.8, 
+             position = position_dodge(width = 0.03),
+             transformation = position_jitterdodge(seed = 2, jitter.width = 0.55)
+             )+
+  geom_boxplot(aes(x = model, y = micro_f1), 
+               alpha = 0.2, 
+               width = 0.3,
+               position = position_nudge(x = 0.25), 
+               outlier.shape = NA
+               )+
+  stat_summary(aes(x = model, y = micro_f1, col = ""), 
+               fun=mean, 
+               geom="point", 
+               shape=120, 
+               size=4
+               )+
+  xlab("Model"
+       )+
+  ylab("Micro F1"
+       )+
+  labs(title = "DaNE Results - Micro F1"
+       )+
+  scale_fill_brewer(name = "Run", palette = "Dark2"
+                      )+
+  scale_color_manual(name = "Average Micro F1", values = "black"
+                     )+
+  scale_x_discrete(labels=c("Ælæctra_cased" = "Ælæctra Cased", 
+                            "Ælæctra_uncased" = "Ælæctra Uncased", 
+                            "danish_BERT" = "DaBERT", 
+                            "multi_BERT_cased" = "mBERT Cased", 
+                            "multi_BERT_uncased" = "mBERT Uncased")
+                   )+
+  theme_bw()+
+  theme(text = element_text(size=10),
+        axis.text.x = element_text(angle=90, hjust=1)
+        )
+p_DaNE
+ggsave("DaNE_results.png")
+```
+
+
+```{r}
+df_kmd$data <- "KMD"
+df_DaNE$data <- "DaNE"
+```
+
+```{r AIT KMD}
+p_AIT_KMD <- df_kmd %>% ggplot(aes(x = model, y = AIT, shape = data, color = model))+
+  geom_point(size = 3)+
+  xlab("Model"
+       )+
+  ylab("Average Inference Time (Sec/Epoch)"
+       )+
+  labs(title = "KMD Results - Average Inference Time"
+       )+
+  scale_x_discrete(labels=c("Ælæctra_cased" = "Ælæctra Cased",
+                            "Ælæctra_uncased" = "Ælæctra Uncased",
+                            "danish_BERT" = "DaBERT",
+                            "multi_BERT_cased" = "mBERT Cased",
+                            "multi_BERT_uncased" = "mBERT Uncased")
+                   )+
+  scale_shape_manual(name ="Dataset", values = c("DaNE" = 1, "KMD" = 2))+
+  guides(color = FALSE, shape = FALSE)+
+  theme_bw()+
+  theme(text = element_text(size=10),
+        axis.text.x = element_text(angle=90, hjust=1)
+        )
+p_AIT
+ggsave("AIT_KMD_results.png")
+
+
+```
+
+```{r AIT DaNE}
+p_AIT_DaNE <- df_DaNE %>% ggplot(aes(x = model, y = AIT, shape = data, color = model))+
+  geom_point(size = 3)+
+  xlab("Model"
+       )+
+  ylab("Average Inference Time (Sec/Epoch)"
+       )+
+  labs(title = "DaNE Results - Average Inference Time"
+       )+
+  scale_x_discrete(labels=c("Ælæctra_cased" = "Ælæctra Cased",
+                            "Ælæctra_uncased" = "Ælæctra Uncased",
+                            "danish_BERT" = "DaBERT",
+                            "multi_BERT_cased" = "mBERT Cased",
+                            "multi_BERT_uncased" = "mBERT Uncased")
+                   )+
+  scale_shape_manual(name ="Dataset", values = c("DaNE" = 1, "DaNE" = 2))+
+  guides(color = FALSE, shape = FALSE)+
+  theme_bw()+
+  theme(text = element_text(size=10),
+        axis.text.x = element_text(angle=90, hjust=1)
+        )
+p_AIT_DaNE
+ggsave("AIT_DaNE_results.png")
+
+
+```
+
+
+
+```{r patchwork}
+combined <- (p_kmd + p_DaNE) & theme(legend.position = "bottom")
+combined + plot_layout(guides = "collect")
+ggsave("combined_plots.png")
+
+p_AIT_KMD + p_AIT_DaNE
+ggsave("combined_AIT_plots.png")
+```
+

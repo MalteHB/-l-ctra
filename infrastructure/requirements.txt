@@ -1,0 +1,12 @@
+pandas==1.1.4
+numpy==1.18.5
+tqdm==4.41.1
+transformers==3.3.0
+keras==2.3.0
+torch==1.7.0+cu101
+torchvision==0.8.1+cu101
+sklearn==1.8.0 
+matplotlib==3.2.2
+seaborn==0.11.0
+nltk==3.2.5
+danlp==0.0.10
