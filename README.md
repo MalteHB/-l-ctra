@@ -1,4 +1,4 @@
-### Ælæctra - A Step Towards More Efficient Danish Natural Language Processing
+# Ælæctra - A Step Towards More Efficient Danish Natural Language Processing
 Ælæctra is a Danish Transformer-based language model created to enhance the variety of Danish NLP resources with a more efficient model compared to previous state-of-the-art (SOTA) models. 
 
 Ælæctra was pretrained with the ELECTRA-Small (Clark et al., 2020) pretraining approach by using the Danish Gigaword Corpus (Strømberg-Derczynski et al., 2020) and evaluated on Named Entity Recognition tasks. 
