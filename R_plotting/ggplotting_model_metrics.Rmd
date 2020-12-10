@@ -20,7 +20,7 @@ pacman::p_load(tidyverse, patchwork, gghalves)
 ```
 
 ```{r load data}
-df_kmd <- read_csv("/Users/malte/OneDrive\ -\ Aarhus\ universitet/Aarhus\ Universitet/Cognitive\ Science/Bachelor/FINAL_NOTEBOOKS_AND_MODELS/micro_f1_5runs_KMD.csv", 
+df_kmd <- read_csv("micro_f1_5runs_KMD.csv", 
                col_types = cols(
                  run = col_character(),
                  model = col_character(),
@@ -30,7 +30,7 @@ df_kmd <- read_csv("/Users/malte/OneDrive\ -\ Aarhus\ universitet/Aarhus\ Univer
 
 
 ```{r load data}
-df_DaNE <- read_csv("/Users/malte/OneDrive\ -\ Aarhus\ universitet/Aarhus\ Universitet/Cognitive\ Science/Bachelor/FINAL_NOTEBOOKS_AND_MODELS/micro_f1_5runs_daNLP.csv", 
+df_DaNE <- read_csv("micro_f1_5runs_daNLP.csv", 
                col_types = cols(
                  run = col_character(),
                  model = col_character(),
