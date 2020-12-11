@@ -5,6 +5,22 @@
 
 Ælæctra was, as mentioned, created to enhance the Danish NLP capabilties and please do note how this GitHub still does not support the Danish characters "*Æ, Ø and Å*" as the title of this repository becomes "*-l-ctra*". How ironic.🙂
 
+Here is an example on how to load both the cased and the uncased Ælæctra model in [PyTorch](https://pytorch.org/) using the [🤗Transformers](https://github.com/huggingface/transformers) library:
+
+```python
+from transformers import AutoTokenizer, AutoModelForPreTraining
+
+tokenizer = AutoTokenizer.from_pretrained("Maltehb/-l-ctra-cased")
+model = AutoModelForPreTraining.from_pretrained("Maltehb/-l-ctra-cased")
+```
+
+```python
+from transformers import AutoTokenizer, AutoModelForPreTraining
+
+tokenizer = AutoTokenizer.from_pretrained("Maltehb/-l-ctra-uncased")
+model = AutoModelForPreTraining.from_pretrained("Maltehb/-l-ctra-uncased")
+```
+
 ### Evaluation of current Danish Language Models 
 
 Ælæctra, Danish BERT (DaBERT) and multilingual BERT (mBERT) were evaluated:
