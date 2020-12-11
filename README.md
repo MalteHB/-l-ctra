@@ -1,18 +1,22 @@
 # Ælæctra - A Step Towards More Efficient Danish Natural Language Processing
-**Ælæctra** is a Danish Transformer-based language model created to enhance the variety of Danish NLP resources with a more efficient model compared to previous state-of-the-art (SOTA) models. It was created as part of a Cognitive Science bachelor's thesis. The temporary draft can be read [here](https://docs.google.com/document/d/1p-btta9RqE2mirWSus-ZNLcMZlEZN8j1NOjZ7VUxUlM/edit?usp=sharing).
+**Ælæctra** is a Danish Transformer-based language model created to enhance the variety of Danish NLP resources with a more efficient model compared to previous state-of-the-art (SOTA) models. Initially a cased and an uncased model are released. It was created as part of a Cognitive Science bachelor's thesis. The temporary draft can be read [here](https://docs.google.com/document/d/1p-btta9RqE2mirWSus-ZNLcMZlEZN8j1NOjZ7VUxUlM/edit?usp=sharing).
 
 Ælæctra was pretrained with the ELECTRA-Small (Clark et al., 2020) pretraining approach by using the Danish Gigaword Corpus (Strømberg-Derczynski et al., 2020) and evaluated on Named Entity Recognition (NER) tasks. Since NER only presents a limited picture of Ælæctra's capabilities I am very interested in further evaluations. Therefore, if you employ it for any task, feel free to hit me up your findings!
 
 Ælæctra was, as mentioned, created to enhance the Danish NLP capabilties and please do note how this GitHub still does not support the Danish characters "*Æ, Ø and Å*" as the title of this repository becomes "*-l-ctra*". How ironic.🙂
 
-### Released Models
+### Evaluation of current Danish Language Models 
 
-Initially two pretrained models are released:
+Ælæctra, Danish BERT (DaBERT) and multilingual BERT (mBERT) were evaluated:
 
 | Model | Layers | Hidden Size | Params | AVG NER micro-f1 (DaNE-testset) | Average Inference Time (Sec/Epoch) | Download | 
 | --- | --- | --- | --- | ---  | --- | --- |
-| Ælæctra-Uncased | 12 | 256 | 13.7M | 78.03 (SD = 1.28) | 10.91 | [Link for models](https://www.dropbox.com/s/cag7prs1nvdchqs/%C3%86l%C3%A6ctra.zip?dl=0) | 
-| Ælæctra-Cased | 12 | 256 | 14.7M | 80.08 (SD = 0.26) | 10.92 | [Link for models](https://www.dropbox.com/s/cag7prs1nvdchqs/%C3%86l%C3%A6ctra.zip?dl=0) | 
+| Ælæctra Uncased | 12 | 256 | 13.7M | 78.03 (SD = 1.28) | 10.91 | [Link for model](https://www.dropbox.com/s/cag7prs1nvdchqs/%C3%86l%C3%A6ctra.zip?dl=0) | 
+| Ælæctra Cased | 12 | 256 | 14.7M | 80.08 (SD = 0.26) | 10.92 | [Link for model](https://www.dropbox.com/s/cag7prs1nvdchqs/%C3%86l%C3%A6ctra.zip?dl=0) | 
+| DaBERT | 12 | 768 | 110M | 84.89 (SD = 0.64) | 43.03 | [Link for model](https://www.dropbox.com/s/19cjaoqvv2jicq9/danish_bert_uncased_v2.zip?dl=1) | 
+| mBERT Uncased | 12 | 768 | 167M | 80.44 (SD = 0.82) | 72.10 | [Link for model](https://storage.googleapis.com/bert_models/2018_11_03/multilingual_L-12_H-768_A-12.zip) | 
+| mBERT Cased | 12 | 768 | 177M | 83.79 (SD = 0.91) | 70.56 | [Link for model](https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip) | 
+
 
 On [DaNE](https://danlp.alexandra.dk/304bd159d5de/datasets/ddt.zip) (Hvingelby et al., 2020), Ælæctra scores slightly worse than both cased and uncased Multilingual BERT (Devlin et al., 2019) and Danish BERT (Danish BERT, 2019/2020), however, is more than 3 times faster at inference time. For a full description of the evaluation and specification of the model read the thesis: 'Ælæctra - A Step Towards More Efficient Danish Natural Language Processing'. 
 
