@@ -34,7 +34,7 @@ model = AutoModelForPreTraining.from_pretrained("Maltehb/-l-ctra-uncased")
 | mBERT Cased | 12 | 768 | 177M | 83.79 (SD = 0.91) | 70.56 | [Link for model](https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip) | 
 
 
-On [DaNE](https://danlp.alexandra.dk/304bd159d5de/datasets/ddt.zip) (Hvingelby et al., 2020), Ælæctra scores slightly worse than both cased and uncased Multilingual BERT (Devlin et al., 2019) and Danish BERT (Danish BERT, 2019/2020), however, is more than 3 times faster at inference time. For a full description of the evaluation and specification of the model read the thesis: 'Ælæctra - A Step Towards More Efficient Danish Natural Language Processing'. 
+On [DaNE](https://danlp.alexandra.dk/304bd159d5de/datasets/ddt.zip) (Hvingelby et al., 2020), Ælæctra scores slightly worse than both cased and uncased Multilingual BERT (Devlin et al., 2019) and Danish BERT (Danish BERT, 2019/2020), however, is more than 3 times faster per batch at inference time. For a full description of the evaluation and specification of the model read the thesis: 'Ælæctra - A Step Towards More Efficient Danish Natural Language Processing'. 
 
 ### Pretraining
 To pretrain Ælæctra it is recommended to build a Docker Container from the [Dockerfile](https://github.com/MalteHB/Ælæctra/tree/master/notebooks/fine-tuning/). Next, simply follow the [pretraining notebooks](https://github.com/MalteHB/Ælæctra/tree/master/infrastructure/Dockerfile/) 
