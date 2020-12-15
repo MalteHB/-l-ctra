@@ -10,15 +10,15 @@ Here is an example on how to load both the cased and the uncased Ælæctra model
 ```python
 from transformers import AutoTokenizer, AutoModelForPreTraining
 
-tokenizer = AutoTokenizer.from_pretrained("Maltehb/-l-ctra-cased")
-model = AutoModelForPreTraining.from_pretrained("Maltehb/-l-ctra-cased")
+tokenizer = AutoTokenizer.from_pretrained("Maltehb/-l-ctra-danish-electra-small-cased")
+model = AutoModelForPreTraining.from_pretrained("Maltehb/-l-ctra-danish-electra-small-cased")
 ```
 
 ```python
 from transformers import AutoTokenizer, AutoModelForPreTraining
 
-tokenizer = AutoTokenizer.from_pretrained("Maltehb/-l-ctra-uncased")
-model = AutoModelForPreTraining.from_pretrained("Maltehb/-l-ctra-uncased")
+tokenizer = AutoTokenizer.from_pretrained("Maltehb/-l-ctra-danish-electra-small-uncased")
+model = AutoModelForPreTraining.from_pretrained("Maltehb/-l-ctra-danish-electra-small-uncased")
 ```
 
 ### Evaluation of current Danish Language Models 
