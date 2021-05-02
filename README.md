@@ -55,8 +55,7 @@ Hvingelby, R., Pauli, A. B., Barrett, M., Rosted, C., Lidegaard, L. M., & Søgaa
 
 Strømberg-Derczynski, L., Baglini, R., Christiansen, M. H., Ciosici, M. R., Dalsgaard, J. A., Fusaroli, R., Henrichsen, P. J., Hvingelby, R., Kirkedal, A., Kjeldsen, A. S., Ladefoged, C., Nielsen, F. Å., Petersen, M. L., Rystrøm, J. H., & Varab, D. (2020). The Danish Gigaword Project. ArXiv:2005.03521 [Cs]. http://arxiv.org/abs/2005.03521
 
-
-#### Acknowledgements
+### Acknowledgements
 As the majority of this repository is build upon [the works](https://github.com/google-research/electra) by the team at Google who created ELECTRA, a HUGE thanks to them is in order. 
 
 A Giga thanks also goes out to the incredible people who collected The Danish Gigaword Corpus (Strømberg-Derczynski et al., 2020). 
@@ -65,7 +64,16 @@ Furthermore, I would like to thank my supervisor [Riccardo Fusaroli](https://git
 
 Lastly, i would like to thank KMD, my colleagues from KMD, and my peers and co-students from Cognitive Science for encouriging me to keep on working hard and holding my head up high!
 
-#### Contact
+### Reference
+```bibtex
+@inproceedings{højmark-bertelsen2021ælæctra,
+    title={Ælæctra - A Step Towards More Efficient Danish Natural Language Processing},
+    author={Højmark-Bertelsen, Malte},
+    year={2021}
+}
+```
+
+### Contact
 
 For help or further information feel free to connect with the author Malte Højmark-Bertelsen on [hjb@kmd.dk](mailto:hjb@kmd.dk?subject=[GitHub]%20Ælæctra) or any of the following platforms:
 
