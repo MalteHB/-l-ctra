@@ -70,6 +70,7 @@ Lastly, i would like to thank KMD, my colleagues from KMD, and my peers and co-s
     title={Ælæctra - A Step Towards More Efficient Danish Natural Language Processing},
     author={Højmark-Bertelsen, Malte},
     year={2021}
+    url={https://github.com/MalteHB/-l-ctra/}
 }
 ```
 
