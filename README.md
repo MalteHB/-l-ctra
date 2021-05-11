@@ -66,10 +66,11 @@ Lastly, i would like to thank KMD, my colleagues from KMD, and my peers and co-s
 
 ### Reference
 ```bibtex
-@inproceedings{højmark-bertelsen2021ælæctra,
+@inproceedings{hojmark-bertelsen2021-l-ctra,
     title={Ælæctra - A Step Towards More Efficient Danish Natural Language Processing},
     author={Højmark-Bertelsen, Malte},
     year={2021}
+    url={https://github.com/MalteHB/-l-ctra/}
 }
 ```
 
